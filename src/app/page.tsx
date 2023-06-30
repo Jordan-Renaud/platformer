@@ -1,5 +1,5 @@
 import Grid from "./components/Grid";
-import { PixelId, PixelType } from "./components/Types";
+import { IconType, PixelId, PixelType } from "./components/Types";
 
 const simpleLevelPlan = `
 ......................

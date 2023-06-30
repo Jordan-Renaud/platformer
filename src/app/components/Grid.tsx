@@ -1,4 +1,4 @@
-import Pixel from "./Pixel";
+import Pixel from "./Pixel/Pixel";
 import { PixelType } from "./Types";
 
 export default function Grid({ plan }: { plan: PixelType[][] }) {
