@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import Pixel from "./Pixel/Pixel";
-import { PixelType } from "./Types";
+import { PlanContext } from "./PlanContext";
 
-export default function Grid({ plan }: { plan: PixelType[][] }) {
+export default function Grid() {
+  const plan = useContext(PlanContext);
   return (
     <div className="grid">
       {plan.map((row) =>
