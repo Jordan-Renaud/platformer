@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,8 +14,8 @@
 
 .grid {
   display: grid;
-  width: 80vw;
-  height: 60vh;
+  width: 66rem;
+  height: 27rem;
   grid-template-columns: repeat(22, 1fr);
   grid-template-rows: repeat(9, 1fr);
   background-color: aqua;
@@ -43,4 +39,10 @@
 
 .player {
   background-color: black;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

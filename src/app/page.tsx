@@ -1,5 +1,5 @@
 import Grid from "./components/Grid";
-import { IconType, PixelId, PixelType } from "./components/Types";
+import { PixelId, PixelType } from "./components/Types";
 
 const simpleLevelPlan = `
 ......................
@@ -33,7 +33,7 @@ function simplePlanToGridPlan(plan: string) {
 
 export default function Home() {
   return (
-    <main>
+    <main className="home">
       <h1>Platformer</h1>
       <Grid plan={simplePlanToGridPlan(simpleLevelPlan)} />
     </main>
