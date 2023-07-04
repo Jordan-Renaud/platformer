@@ -64,34 +64,3 @@ export function iterateThroughPlan(
     });
   });
 }
-
-export function updateLocation(
-  plan: PixelType[][],
-  location: PixelType["location"],
-  id: PixelType["id"]
-) {
-  const newPlan = [...plan];
-  newPlan[location.yCoord][location.xCoord].id = id;
-  return newPlan;
-}
-
-export function updatePlayerLocation(
-  plan: PixelType[][],
-  newPlayerLocation: PixelType["location"],
-  previousPlayerLocation: PixelType["location"]
-) {
-  const originalPlan = [...plan];
-
-  const removePlayerFromOldLocationPlan = updateLocation(
-    originalPlan,
-    previousPlayerLocation,
-    "."
-  );
-  const movePlayerToNewLocationPlan = updateLocation(
-    removePlayerFromOldLocationPlan,
-    newPlayerLocation,
-    "@"
-  );
-
-  return movePlayerToNewLocationPlan;
-}
