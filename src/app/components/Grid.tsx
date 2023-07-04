@@ -3,7 +3,7 @@ import Pixel from "./Pixel/Pixel";
 import { PlanContext } from "./PlanContext";
 
 export default function Grid() {
-  const plan = useContext(PlanContext);
+  const { plan } = useContext(PlanContext);
   return (
     <div className="grid">
       {plan.map((row) =>
