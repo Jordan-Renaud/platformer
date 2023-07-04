@@ -7,7 +7,7 @@ import {
   MovingLava,
   Wall,
 } from "./Pixel/PixelOptions";
-import Player from "./Player";
+import PlayerPixel from "./Player/PlayerPixel";
 
 export const emptyLevelPlan = `
 ......................
@@ -60,7 +60,7 @@ export const iconData: IconType[] = [
     iconId: "@",
     iconColour: "black",
     iconDescription: "player",
-    component: <Player />,
+    component: <PlayerPixel />,
   },
   {
     iconId: "|",
