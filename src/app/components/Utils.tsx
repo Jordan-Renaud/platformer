@@ -81,12 +81,17 @@ export function updatePlayerLocation(
   previousPlayerLocation: PixelType["location"]
 ) {
   const originalPlan = [...plan];
-  const playerMovedPlan = updateLocation(
+
+  const removePlayerFromOldLocationPlan = updateLocation(
     originalPlan,
     previousPlayerLocation,
+    "."
+  );
+  const movePlayerToNewLocationPlan = updateLocation(
+    removePlayerFromOldLocationPlan,
+    newPlayerLocation,
     "@"
   );
 
-  const newPlan = updateLocation(playerMovedPlan, newPlayerLocation, ".");
-  return newPlan;
+  return movePlayerToNewLocationPlan;
 }
