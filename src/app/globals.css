@@ -19,7 +19,6 @@
   grid-template-columns: repeat(22, 1fr);
   grid-template-rows: repeat(9, 1fr);
   background-color: aqua;
-  gap: 1px;
 }
 
 .lava {

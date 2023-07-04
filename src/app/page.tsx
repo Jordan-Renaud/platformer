@@ -1,18 +1,21 @@
 "use client";
-import { useMemo, useState } from "react";
 import Grid from "./components/Grid";
-import { PlanContext } from "./components/PlanContext";
-import { simplePlanToGridPlan } from "./components/Utils";
-import { simpleLevelPlan } from "./components/Data";
+import { PlanContext, simplePlanToGridPlan } from "./components/PlanContext";
 
-const gridPlan = simplePlanToGridPlan(simpleLevelPlan);
+const simpleLevelPlan = `
+......................
+..#................#..
+..#..............=.#..
+..#.........o.o....#..
+..#.@......#####...#..
+..#####............#..
+......#++++++++++++#..
+......##############..
+......................`;
 
 export default function Home() {
-  const [plan, updatePlan] = useState(gridPlan);
-  const planProviderValue = useMemo(() => ({ plan, updatePlan }), [plan]);
-
   return (
-    <PlanContext.Provider value={planProviderValue}>
+    <PlanContext.Provider value={simplePlanToGridPlan(simpleLevelPlan)}>
       <main className="home">
         <h1>Platformer</h1>
         <Grid />
