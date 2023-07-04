@@ -68,6 +68,7 @@ function getMoveCallback(keyPressed: string) {
 
 //checks to see if the pixel is something we can move to
 function checkIfMoveIsValid() {
+  //work on this next
   //if it isn't blocked
   //if it isn't the edge of the board
 }
